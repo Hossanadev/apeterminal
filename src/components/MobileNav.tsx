@@ -4,7 +4,7 @@ import {Instagram, Twitter} from "react-feather";
 export const MobileNav: React.FC = () => {
     return (
         <div
-            className={"text-center duration-500 transition-all space-y-6 backdrop bg-opacity-70 pt-[15%] text-white backdrop-blur-lg bg-black z-40 fixed w-full top-10 h-[40%] rounded-b-3xl"}>
+            className={"text-center duration-500 transition-all space-y-6 backdrop bg-opacity-70 pt-[15%] sm:pt-[8%] text-white backdrop-blur-lg bg-black z-40 fixed w-full top-10 h-[40%] rounded-b-3xl"}>
             <a href={"#"} className={"hover:text-yellow-400 transition-all duration-500 block"}>Connect Wallet</a>
             <a href={"#"} className={"hover:text-yellow-400 transition-all duration-500 block"}>Launchpad</a>
             <a href={"#"} className={"hover:text-yellow-400 transition-all duration-500 block"}>Transparency</a>
