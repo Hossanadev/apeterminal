@@ -21,7 +21,7 @@ export const TopBarCard: React.FC<TopBarCardType> = ({icon, name, borderColor,
                 <div style={{borderColor: borderColor, backgroundColor: backgroundColor, borderRadius: borderRadius}} className={`flex gap-x-2 py-2.5 px-5 border-[0.5px] rounded-xl font-medium` +
             className}>
                 <Image src={icon} alt={name} className={`${hideIcon ? "hidden" : ""} inline-block h-[20px] w-[20px]`}/>
-                <p style={{color: textColor}} className={"inline-block text-[14px]"}>{name}</p>
+                <p style={{color: textColor}} className={"inline-block text-[14px] align-middle mx-auto"}>{name}</p>
                 </div>
         </Link>
     )

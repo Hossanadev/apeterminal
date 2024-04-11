@@ -56,15 +56,15 @@ export const TopBar: React.FC = () => {
                     {
                         !showMobileNavbar ?
                             <Menu onClick={() => setShowMobileNavbar(!showMobileNavbar)}
-                                  className={"cursor-pointer font-semibold size-8 text-[#b2b4b3] bg-blend-color"}/>
+                                  className={"cursor-pointer font-semibold size-8 text-[#b2b4b3] bg-blend-color z-50"}/>
                             : <X onClick={() => setShowMobileNavbar(!showMobileNavbar)}
-                                    className={"cursor-pointer font-semibold size-8 text-[#b2b4b3] bg-blend-color"}/>
+                                    className={"cursor-pointer font-semibold size-8 text-[#b2b4b3] bg-blend-color z-50"}/>
                     }
                 </div>
             </header>
             <div className={`transition-all duration-500 ease-in-out`}>
                 {
-                    showMobileNavbar && <MobileNav />
+                    showMobileNavbar && <MobileNav showMobileNavbar={showMobileNavbar} setShowMobileNavbar={setShowMobileNavbar} />
                 }
             </div>
         </>

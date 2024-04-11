@@ -173,24 +173,24 @@ export const Body: React.FC = () => {
                                 linkURL={"#"}/>
                         </div>
                     </div>
-                    <div className={"text-white text-xl italic py-8 text-center"}>{'<-  3 / 7  ->'}</div>
+                    <div className={"text-white text-lg py-8 text-center"}>{'<-  3 / 7  ->'}</div>
                 </div>
-                <section className={"relative bg-black flex justify-center items-center overflow-hidden w-full"}>
+                <section className={"relative bg-black flex justify-center max-lg:h-[600px] items-center overflow-hidden w-full"}>
                     <Image src={footerImage} alt={"footerbackgroundImg"}
-                           className={"w-full z-10 h-[60%] object-cover"}/>
+                           className={"w-full z-10 h-full lg:h-[60%]  object-cover"}/>
                     <div
-                        className="absolute top-1/2 right-0 left-0 transform max-sm:-translate-y-1/2 lg:-translate-y-1/5 z-10 text-white text-center">
-                        <div className={"text-xl lg:text-2xl xl:text-6xl font-semibold text-black"}>
+                        className="absolute top-1/2 right-0 left-0 transform lg:-translate-y-1/5 z-10 px-5 text-white text-center">
+                        <div className={"text-5xl xl:text-6xl font-semibold text-black"}>
                             <p>
-                                Launch on, <br className={"hidden xl:block"}/>
+                                Launch on <br className={"hidden xl:block"}/>
                                 Ape Terminal
                             </p>
-                            <span className={"text-sm lg:text-lg xl:text-xl font-normal w-full"}>Don’t miss the chance and super-charge your IDO launch!
+                            <span className={"text-sm block lg:text-lg xl:text-xl font-normal leading-1 max-sm: my-5"}>Don’t miss the chance and super-charge your IDO launch!
                             </span>
                         </div>
                         <div className={"flex justify-center mt-2 lg:mt-8"}>
                             <button
-                                className={"bg-[#ff7722] max-sm:text-sm rounded-3xl px-4 py-2 md:px-6 md:py-3 border border-black"}>
+                                className={"bg-[#ff7722] max-sm:text-sm rounded-3xl px-6 py-3 border text-black border-black"}>
                                 Apply for Launchpad
                             </button>
                         </div>
