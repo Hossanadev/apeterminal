@@ -14,10 +14,10 @@ interface MobileNavType {
 
 export const MobileNav: React.FC<MobileNavType> = ({showMobileNavbar, setShowMobileNavbar}) => {
     return (
-        <div className={"backdrop bg-opacity-90 text-white backdrop-blur-lg bg-black z-50 fixed w-full min-h-screen"}>
-            <div className={"flex justify-between items-center p-3 top-0"}>
+        <div className={"backdrop py-[12px] bg-opacity-90 text-white backdrop-blur-lg bg-black z-50 fixed w-full min-h-screen"}>
+            <div className={"flex justify-between items-center px-2.5 md:px-16 lg:px-[100px] transition-all duration-500 top-0"}>
                 <Link href={"#"}>
-                    <Image src={logo} alt={"ape terminal logo"} className={"h-[40px] w-[130px]"}/>
+                    <Image style={{height: "auto", width: "auto"}} src={logo} alt={"ape terminal logo"} className={"h-[40px] w-[130px]"}/>
                 </Link>
                 <div className={"hidden max-lg:flex text-sm items-center space-x-6"}>
                     <X onClick={() => setShowMobileNavbar(!showMobileNavbar)} className={"cursor-pointer font-semibold size-8 text-[#ffffff] bg-blend-color z-50"}/>
@@ -25,7 +25,7 @@ export const MobileNav: React.FC<MobileNavType> = ({showMobileNavbar, setShowMob
             </div>
             <div className={"mt-14"}>
                 <div className={"mx-20"}>
-                    <TopBarCard hideIcon icon={""} name={"Connect Wallet"} borderColor={"#ffffff"} textColor={"#000000"}
+                    <TopBarCard hideIcon icon={icon1} name={"Connect Wallet"} borderColor={"#ffffff"} textColor={"#000000"}
                                 backgroundColor={"#ffffff"} borderRadius={"26px"} linkURL={"#"}
                                 className={"font-bold text-black px-5 py-2"}/>
                 </div>

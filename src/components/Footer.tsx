@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
                         App</p>
                     <p className={"bg-black py-1.5 px-4 max-sm:text-[10px] rounded-3xl cursor-pointer hover:text-[#FF741E] transition-all duration-500"}>Transparency</p>
                 </div>
-                <div className={"hidden lg:flex max-lg:flex-col md:items-center"}>
+                <div className={"hidden lg:flex max-lg:flex-col md:items-center lg:space-x-1.5"}>
                     <p className={"text-[#e5e7e7] max-sm:text-sm"}>Join our community</p>
                     <div className={"bg-[#1a1a1a] w-fit flex items-center p-1.5 gap-1 rounded-3xl text-sm"}>
                         <Twitter className={"bg-black p-1 rounded-3xl h-7 w-12"}/>
