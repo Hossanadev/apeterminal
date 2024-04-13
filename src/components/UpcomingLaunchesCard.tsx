@@ -21,7 +21,7 @@ totalRaise, buttonURL, buttonText}) => {
     return (
         <>
             <div className={""}>
-                <video height={239} autoPlay={true} loop={true} className="w-full object-cover h-[239px] rounded-t-xl bg-black"
+                <video controls={false} height={239} autoPlay={true} loop={true} className="w-full object-cover h-[239px] rounded-t-xl bg-black custom-video"
                        style={{borderTop: 6}}>
                     <source src={videoURL}
                             type="video/mp4"/>
