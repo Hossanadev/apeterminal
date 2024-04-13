@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import icon1 from "../../public/assets/icons/icon1.svg";
 import authROiIcon from "../../public/assets/icons/metrixicon.svg"
 import tickerIcon from "../../public/assets/icons/tickericon.svg"
 import totalRaiseIcon from "../../public/assets/icons/totalRaiseicon.svg"
@@ -39,7 +38,7 @@ export const CompletedSalesCard: React.FC<CompletedSalesCardType> = (props) => {
                         <Image src={tickerIcon} alt={"tickerIcon"} className={"h-5 w-5"}/>
                         <p className={"text-xs"}>Ticker</p>
                     </div>
-                    <p className={"text-[#ff7722]"}>{ticker}</p>
+                    <p className={"text-white"}>{ticker}</p>
                 </div>
                 <div className={"flex justify-between items-center border-b-[0.5px] border-gray-700 py-3"}>
                     <div className={"flex items-center gap-1"}>
