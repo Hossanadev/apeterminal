@@ -7,7 +7,7 @@ import Link from "next/link";
 export const Footer: React.FC = () => {
     return (
         <div
-            className={"text-white bg-[#121212] px-2.5 md:px-16 lg:px-[100px] transition-all duration-500  py-10 max-sm:space-y-7"}>
+            className={"text-white bg-[#121212] px-2.5 md:px-16 lg:px-[100px] transition-all duration-500  py-10 max-sm:space-y-7 space-y-10"}>
             <Image src={logo} alt={"logo"}/>
             <div
                 className={"sm:my-5 max-lg:space-y-3 lg:flex justify-between items-center max-lg:border-b max-lg:border-t max-lg:border-gray-700 max-lg:py-6 w-fit lg:w-full"}>
