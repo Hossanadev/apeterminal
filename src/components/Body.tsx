@@ -31,7 +31,7 @@ export const Body: React.FC = () => {
 
     const handleClickPrev = () => {
         if (startIndex - groupSize >= 0) {
-            setStartIndex(startIndex - 3);
+            setStartIndex(startIndex - groupSize);
         } else {
             setStartIndex(completedSales.length - groupSize)
         }
