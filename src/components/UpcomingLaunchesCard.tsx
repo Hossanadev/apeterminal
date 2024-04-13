@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, {useEffect, useState} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import forwardPress from "../../public/assets/icons/nexticon.svg";
@@ -14,19 +16,37 @@ type UpcomingLaunchesCardType = {
     marketMaker: string;
     buttonText: string;
     buttonURL: string;
+    imageSRC: string,
+    imageALT: string
 }
 
 export const UpcomingLaunchesCard: React.FC<UpcomingLaunchesCardType> = ({videoURL, iconSRC, name, salesType, marketMaker, tags,endsIn,
-totalRaise, buttonURL, buttonText}) => {
+totalRaise, buttonURL, buttonText, imageSRC, imageALT}) => {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        function handleResize() {
+            setIsMobile(window.innerWidth <= 1024);
+        }
+        window.addEventListener('resize', handleResize);
+        handleResize();
+        return () => window.removeEventListener('resize', handleResize);
+    }, [isMobile]);
+
     return (
         <>
             <div className={""}>
-                <video controls={false} height={239} autoPlay={true} loop={true} className="w-full object-cover h-[239px] rounded-t-xl bg-black custom-video"
-                       style={{borderTop: 6}}>
-                    <source src={videoURL}
-                            type="video/mp4"/>
-                    Your browser does not support the video tag.
-                </video>
+                {
+                    isMobile ? <Image src={imageSRC} alt={imageALT} className={"w-full object-cover h-[239px] rounded-t-xl bg-black"} /> :
+                        <video controls={false} height={239} autoPlay preload={"auto"} muted loop
+                               className="w-full object-cover h-[239px] rounded-t-xl bg-black custom-video"
+                               style={{borderTop: 6}}>
+                            <source src={videoURL}
+                                    type="video/mp4"/>
+                            Your browser does not support the video tag.
+                        </video>
+                }
                 <div className={"bg-black px-10 py-6 rounded-b-xl"}>
                     <div className={"flex items-center gap-2"}>
                         <Image src={iconSRC} alt={"Nuklai"} className={"h-10 w-10"}/>

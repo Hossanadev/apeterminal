@@ -112,7 +112,7 @@ export const Body: React.FC = () => {
                         </div>
                     </div>
                     <div className={"hidden lg:block bg-black rounded-r-lg my-4 w-full"}>
-                        <video autoPlay={true} loop={true} className="w-full h-full object-cover"
+                        <video loop autoPlay preload={"auto"} muted className="w-full h-full object-cover"
                                style={{borderTopRightRadius: 6, borderBottomRightRadius: 6}}>
                             <source
                                 src={"https://dl.dropboxusercontent.com/scl/fi/ebq3fzgcqq6dkwiisnl08/video2.mp4?rlkey=1qc0yiivyrp4wvy9f5ip0ql76&dl=0"}
@@ -130,6 +130,8 @@ export const Body: React.FC = () => {
                             return <div key={index}>
                                 <UpcomingLaunchesCard
                                     videoURL={upcomingLaunch.videoURL}
+                                    imageSRC={upcomingLaunch.imageSRC}
+                                    imageALT={upcomingLaunch.imageALT}
                                     tags={upcomingLaunch.tags}
                                     name={upcomingLaunch.name}
                                     iconSRC={upcomingLaunch.iconSRC}
