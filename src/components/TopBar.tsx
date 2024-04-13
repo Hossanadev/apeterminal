@@ -3,6 +3,8 @@ import React, {useState, useEffect} from 'react';
 import Image from "next/image";
 import logo from "../../public/assets/images/apeterminallogo.svg"
 import icon1 from "../../public/assets/icons/icon1.svg"
+import icon2 from "../../public/assets/icons/transparency.svg"
+import icon3 from "../../public/assets/icons/connectwallet.svg"
 import {TopBarCard} from "@/components/TopBarCard";
 import Link from "next/link";
 import {Menu, X} from "react-feather";
@@ -41,9 +43,9 @@ export const TopBar: React.FC = () => {
                     <TopBarCard name={"Launchpad"} borderColor={"#ff741e40"} icon={icon1} textColor={"#ff741e"}
                                 linkURL={"#"}
                                 className={"cursor-pointer hover:text-[#FF741E] transition-all duration-500"}/>
-                    <TopBarCard name={"Transparency"} borderColor={"#f4fdab40"} icon={icon1} textColor={"#f4fdab"}
+                    <TopBarCard name={"Transparency"} borderColor={"#f4fdab40"} icon={icon2} textColor={"#f4fdab"}
                                 linkURL={"#"}/>
-                    <TopBarCard name={"Connect Wallet"} borderColor={"#ffffff"} icon={icon1} textColor={"#000000"}
+                    <TopBarCard name={"Connect Wallet"} borderColor={"#ffffff"} icon={icon3} textColor={"#000000"}
                                 backgroundColor={"#ffffff"} borderRadius={"3px"} className={"border-0"} linkURL={"#"}/>
                 </div>
 

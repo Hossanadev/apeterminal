@@ -48,7 +48,9 @@ export const Body: React.FC = () => {
         }
     }
 
-    window.onload = handleResize;
+    if (typeof window !== 'undefined') {
+        window.onload = handleResize;
+    }
 
     useEffect(() => {
         handleResize()
