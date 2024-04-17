@@ -18,10 +18,10 @@ export const TopBar: React.FC = () => {
     const [scrolledToTop, setScrolledToTop] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-    const { open, close } = useWeb3Modal();
+    const { open } = useWeb3Modal();
     const { isConnected } = useAccount();
 
-    console.log("[Is-Connected]:: ", isConnected);
+    // console.log("[Is-Connected]:: ", isConnected);
 
 
     useEffect(() => {
@@ -66,16 +66,10 @@ export const TopBar: React.FC = () => {
                                 }}
                             />
                     }
-                    {/* <w3m-connect-button /> */}
-
                 </div>
 
                 {/*    mobile nav*/}
                 <div className={"hidden max-lg:flex text-sm items-center space-x-6"}>
-                    {/* <TopBarCard hideIcon icon={icon1} name={"Connect Wallet"} borderColor={"#ffffff"} textColor={"#000000"}
-                        backgroundColor={"#ffffff"} borderRadius={"26px"} linkURL={"#"}
-                        className={"py-0 px-4 font-semibold"}
-                    /> */}
                     {
                         isConnected ?
                             <w3m-button balance='show' />
@@ -87,7 +81,6 @@ export const TopBar: React.FC = () => {
                                 }}
                             />
                     }
-                    {/* <w3m-connect-button /> */}
 
                     {
                         !showMobileNavbar ?
